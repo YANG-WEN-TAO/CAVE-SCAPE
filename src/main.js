@@ -41,7 +41,7 @@ async function main() {
 
   // 4. 异步加载 glb 洞窟模型
   try {
-    const model = await loadModel('/models/dunhuang_museum.glb', (progress) => {
+    const model = await loadModel(undefined, (progress) => {
       updateLoadingBar(progress)
     })
 

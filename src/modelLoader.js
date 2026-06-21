@@ -10,8 +10,8 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 // 全局模型引用
 let loadedModel = null
 
-// glb 模型路径
-const MODEL_URL = '/models/dunhuang_museum.glb'
+// glb 模型路径（使用 Vite BASE_URL 适配 GitHub Pages 部署路径）
+const MODEL_URL = import.meta.env.BASE_URL + 'models/dunhuang_museum.glb'
 
 /**
  * 异步加载 glb 模型
@@ -24,7 +24,7 @@ export function loadModel(url = MODEL_URL, onProgress) {
     // --- DRACO 解码器（Blender 导出时启用了 Draco 压缩）---
     const dracoLoader = new DRACOLoader()
     // 使用 CDN 托管的 Draco 解码器
-    dracoLoader.setDecoderPath('/draco/')
+    dracoLoader.setDecoderPath(import.meta.env.BASE_URL + 'draco/')
     dracoLoader.setDecoderConfig({ type: 'js' })
 
     // --- glTF 加载器 ---
