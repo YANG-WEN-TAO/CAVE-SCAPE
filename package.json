@@ -1,0 +1,19 @@
+{
+  "name": "cave-scape",
+  "version": "1.0.0",
+  "description": "窟·境 CAVE·SCAPE — 敦煌数字洞窟沉浸式漫游系统 | Immersive Dunhuang Digital Exhibition",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.169.0",
+    "three-gltf-loader": "^1.111.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vite-plugin-compression": "^0.5.1"
+  }
+}
